@@ -41,11 +41,16 @@ export default function Home() {
                         <span className="noHighlight">d</span>
                     </a>
                 </div>
-                <div className="line">
-                    <LetterSpan text="and this is my website." id="homeWord" />
+                <div className="asciiLine">
+                    <pre>   Z<                             br/>Z                          <br/> Z                 </pre>
                 </div>
-                <div className="line">
-                    {/* <LetterSpan text="penis penis penis penis penis penis penis penis" id="homeWord" /> */}
+                <div className="asciiLine">
+                    <pre>
+                        |\      _,,,--,,_<br />
+                        /,`.-'`'   ._  \-;;,_  <br />
+                        |,4-  ) )_   .;.(  `'-'   <br />
+                        \=--''(_/._)-'(_\_)
+                    </pre>
                 </div>
             </div>
         </div>

@@ -305,6 +305,14 @@ button:hover {
   align-items: center;
 }
 
+.asciiLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #f2f2f2;
+}
+
 #homeTitle {
   font-weight: 300 !important;
   text-decoration: none;

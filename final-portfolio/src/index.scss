@@ -351,6 +351,15 @@ button {
     align-items: center;
 }
 
+.asciiLine {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: darken($secondary-color, 5%);
+}
+
+
 #homeTitle {
     font-weight: 300 !important;
     text-decoration: none;

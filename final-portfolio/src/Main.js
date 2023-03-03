@@ -4,7 +4,8 @@ import {
     Route,
     NavLink,
     HashRouter,
-    Routes
+    Routes, 
+    Navigate
 } from "react-router-dom";
 
 import Home from ".//Home";
@@ -20,7 +21,7 @@ function NavItem({ word, navState, onClick }) {
         <li>
             <NavLink
                 className={`nav-item ${word} ${navState}`}
-                to={word}
+                to={word.toLowerCase()}
                 onClick={() => onClick(word)}
             >
                 {word.split("").map((letter, letterIndex) => (
@@ -86,7 +87,7 @@ export default function Main() {
         <HashRouter>
             <header>
                 <div id="logo">
-                    <h2>jam</h2>
+                    <h2></h2>
                 </div>
                 <div></div>
                 <div id="navstuff">
@@ -99,7 +100,8 @@ export default function Main() {
             </header>
             <div id="bodyWrapper">
                 <Routes>
-                    <Route path="/Home" element={<Home />} />
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/" element={<Navigate replace to="/home" />} />
                 </Routes>
             </div>
         </HashRouter>
