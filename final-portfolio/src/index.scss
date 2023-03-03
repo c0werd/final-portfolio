@@ -1,4 +1,4 @@
-$background-color: #F5F5DC;
+$background-color: #2C4251;
 $primary-color: #FFB6C1;
 $secondary-color: #fff;
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text&family=Montserrat:wght@100;300;600');
@@ -33,23 +33,20 @@ header {
     color: $primary-color;
     margin: 0;
     padding: 0;
-    cursor:pointer;
+    cursor: pointer;
     overflow: hidden;
-    transition: all ease 0.5s;
+    // transition: all ease 0.5s;
 
-    &:hover {
-        transform: scale(1.1);
-        color:$secondary-color;
-    }
+    // &:hover {
+    //     transform: scale(1.1);
+    //     color:$secondary-color;
+    // }
 }
 
 #navstuff {
     height: 5rem;
     width: 5rem;
     position: relative;
-    // right: 10rem;
-    // top: 4rem;
-    // transform: translateX(50%);
 }
 
 #nav-toggle {
@@ -132,9 +129,7 @@ header {
     }
 }
 
-
-// if closed
-body:not([data-nav="true"]) {
+.navInactive {
     #closedIcon {
         opacity: 1;
     }
@@ -142,13 +137,13 @@ body:not([data-nav="true"]) {
     #openIcon {
         opacity: 0;
     }
-
-    #nav-bar {
-        transform: translateX(100%);
-    }
 }
 
-body:not([data-nav="true"]) #nav-toggle:hover {
+#nav-bar.navInactive {
+    transform: translateX(100%);
+}
+
+#nav-toggle:hover.navInactive {
     #openIcon {
         opacity: 1;
     }
@@ -159,7 +154,7 @@ body:not([data-nav="true"]) #nav-toggle:hover {
 }
 
 // if open
-body:not([data-nav="false"]) {
+.navActive {
     #openIcon {
         opacity: 1;
     }
@@ -168,49 +163,52 @@ body:not([data-nav="false"]) {
         opacity: 0;
     }
 
-    #nav-bar {
-        transform: translateX(0%);
-    }
-    
-    .nav-item > .nav-letter:nth-child(1) {
+    .nav-item>.nav-letter:nth-child(1) {
         transition-delay: 0.48s;
         transform: rotateX(15deg);
     }
-    .nav-item > .nav-letter:nth-child(2) {
+
+    .nav-item>.nav-letter:nth-child(2) {
         transition-delay: 0.50s;
         transform: rotateX(15deg);
     }
-    .nav-item > .nav-letter:nth-child(3) {
+
+    .nav-item>.nav-letter:nth-child(3) {
         transition-delay: 0.52s;
         transform: rotateX(15deg);
     }
-    .nav-item > .nav-letter:nth-child(4) {
+
+    .nav-item>.nav-letter:nth-child(4) {
         transition-delay: 0.54s;
         transform: rotateX(15deg);
     }
-    .nav-item > .nav-letter:nth-child(5) {
+
+    .nav-item>.nav-letter:nth-child(5) {
         transition-delay: 0.56s;
         transform: rotateX(15deg);
     }
-    .nav-item > .nav-letter:nth-child(6) {
+
+    .nav-item>.nav-letter:nth-child(6) {
         transition-delay: 0.58s;
         transform: rotateX(15deg);
     }
-    .nav-item > .nav-letter:nth-child(7) {
+
+    .nav-item>.nav-letter:nth-child(7) {
         transition-delay: 0.60s;
         transform: rotateX(15deg);
     }
-    .nav-item > .nav-letter:nth-child(8) {
+
+    .nav-item>.nav-letter:nth-child(8) {
         transition-delay: 0.62s;
         transform: rotateX(15deg);
     }
 }
 
-.activate {
+.navActive h1 {
     animation: spinny 0.75s;
 }
 
-.deactivate {
+.navInactive h1 {
     animation: unspinny 0.75s;
 }
 
@@ -227,6 +225,7 @@ button {
     outline: none;
     background-color: transparent;
     cursor: pointer;
+
     &:visited {
         color: $primary-color;
     }
@@ -244,7 +243,7 @@ button {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 #nav-bar li {
@@ -254,6 +253,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 #secret {
@@ -278,6 +278,8 @@ button {
     transition: transform ease-in-out 0.5s;
 }
 
+
+
 .nav-item {
     display: flex;
     text-decoration: none;
@@ -297,4 +299,130 @@ button {
     margin: 0;
     padding: 0;
     transition: transform ease-out 0.1s;
+}
+
+#bodyWrapper {
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+#home {
+    // background-color: darken($background-color, 5%);
+    width: 80%;
+    height: 70%;
+    border-radius: 60px;
+    // box-shadow: inset 1rem 0.5rem 0 0 darken($background-color, 10%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#homeWrapper {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    &:has(.fancy:hover) .word:not(.fancy) {
+        opacity: 0.1;
+    }
+}
+
+.word {
+    font-family: 'Montserrat';
+    font-size: 6.9vw;
+    color: $secondary-color;
+    transition: opacity 250ms ease;
+    font-weight: 100;
+    opacity: 1.0;
+}
+
+.line {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#homeTitle {
+    font-weight: 300 !important;
+    text-decoration: none;
+    opacity: 1.0;
+}
+
+#homeWord {
+    font-size: 4vw;
+}
+
+.noHighlight {
+    opacity: 1.0;
+    transition: opacity 500ms ease;
+}
+
+.highlight {
+    display: inline-block;
+    transform: translate(0%), rotate(0deg);
+    color: $secondary-color;
+    transition: all 500ms ease;
+}
+
+.fancy {
+    cursor: pointer;
+    &:hover {
+        .highlight {
+            color: $primary-color;
+        }
+
+        span:not(.highlight) {
+            opacity: 0.1;
+        }
+
+        //j
+        .highlight:nth-child(1) {
+            transform: translate(-50%) rotate(10deg);
+        }
+
+        //a
+        .highlight:nth-child(2) {
+            transform: translate(5%) rotate(-5deg);
+        }
+
+        //m
+        .highlight:nth-child(3) {
+            transform: translate(-10%) rotate(7deg);
+        }
+
+        //e
+        .highlight:nth-child(4) {
+            transform: translate(9%) rotate(-4deg);
+        }
+
+        //s
+        .highlight:nth-child(5) {
+            transform: translate(20%) rotate(6deg);
+        }
+
+        //s
+        .highlight:nth-child(7) {
+            transform: translate(260%) rotate(3deg);
+        }
+
+        //y
+        .highlight:nth-child(11) {
+            transform: translate(4%) rotate(-6deg);
+        }
+
+        //c
+        .highlight:nth-child(14) {
+            transform: translate(-50%) rotate(-13deg);
+        }
+
+    }
 }
