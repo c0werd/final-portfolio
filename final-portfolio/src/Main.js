@@ -37,10 +37,16 @@ function NavButton({ navState, onClick }) {
 
     return (
         <button id="nav-toggle" type="button" onClick={onClick} className={navState}>
-            <h1 id="closedIcon" className={navState}>j</h1>
+            {/* <h1 i>j</h1> */}
+            <svg id="closedIcon" className={navState} xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="4" y1="6" x2="20" y2="6" />
+  <line x1="4" y1="12" x2="20" y2="12" />
+  <line x1="4" y1="18" x2="20" y2="18" />
+</svg>
             <h1 id="openIcon" className={navState}>:3</h1>
         </button>
-    )
+    );
 }
 
 function NavBar({ navState }) {

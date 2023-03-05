@@ -54,6 +54,7 @@ header {
   transition-duration: 400ms;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 #nav-toggle:hover {
   transform: scale(1.1);
@@ -118,6 +119,10 @@ header {
 
 #nav-bar.navInactive {
   transform: translateX(100%);
+}
+
+#closedIcon {
+  stroke: #fff;
 }
 
 #nav-toggle:hover.navInactive #openIcon {
@@ -292,7 +297,7 @@ button:hover {
 
 .word {
   font-family: "Montserrat";
-  font-size: 6.9vw;
+  font-size: 6.8vw;
   color: #fff;
   transition: opacity 250ms ease;
   font-weight: 100;
@@ -307,8 +312,40 @@ button:hover {
 
 .asciiLine {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.ascii {
+  width: 40%;
+}
+
+#Z1.zActive {
+  transform: translateX(5%);
+}
+#Z1.zInactive {
+  transform: translateX(-6%);
+}
+
+#Z2.zActive {
+  transform: translateX(-6%);
+}
+#Z2.zInactive {
+  transform: translateX(7%);
+}
+
+#Z3.zActive {
+  transform: translateX(2%);
+}
+#Z3.zInactive {
+  transform: translateX(-1%);
+}
+
+.asciiWord {
   font-size: 1.5rem;
   color: #b3b3b3;
   font-family: "Courier New", Courier, monospace;

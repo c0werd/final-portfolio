@@ -64,6 +64,7 @@ header {
     transition-duration: 400ms;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     &:hover {
         transform: scale(1.1);
@@ -141,6 +142,10 @@ header {
 
 #nav-bar.navInactive {
     transform: translateX(100%);
+}
+
+#closedIcon {
+    stroke: $secondary-color;
 }
 
 #nav-toggle:hover.navInactive {
@@ -338,7 +343,7 @@ button {
 
 .word {
     font-family: 'Montserrat';
-    font-size: 6.9vw;
+    font-size: 6.8vw;
     color: $secondary-color;
     transition: opacity 250ms ease;
     font-weight: 100;
@@ -353,8 +358,49 @@ button {
 
 .asciiLine {
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 1.5rem;
+    color: darken($secondary-color, 0%);
+    font-family: "Courier New", Courier, monospace;
+}
+
+.ascii {
+    width: 40%;
+}
+
+.zees {
+}
+
+#Z1 {
+    &.zActive {
+        transform: translateX(5%);
+    }
+    &.zInactive {
+        transform: translateX(-6%);
+    }
+}
+
+#Z2 {
+    &.zActive {
+        transform: translateX(-6%);
+    }
+    &.zInactive {
+        transform: translateX(7%);
+    }
+}
+
+#Z3 {
+    &.zActive {
+        transform: translateX(2%);
+    }
+    &.zInactive {
+        transform: translateX(-1%);
+    }
+}
+
+.asciiWord {
     font-size: 1.5rem;
     color: darken($secondary-color, 30%);
     font-family: "Courier New", Courier, monospace;

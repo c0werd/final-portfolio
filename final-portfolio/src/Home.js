@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { useState, useEffect } from 'react';
 
 
 function LetterSpan({ text, id }) {
@@ -12,6 +13,16 @@ function LetterSpan({ text, id }) {
 
 
 export default function Home() {
+
+    const [zState, setZState] = useState(true);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setZState(prevZState => !prevZState);
+        }, 1500);
+        return () => clearInterval(intervalId);
+    }, []);
+
     return (
         <div id="home">
             <div id="homeWrapper">
@@ -20,20 +31,20 @@ export default function Home() {
                 </div>
                 <div class="line">
                     <a href="https://www.linkedin.com/in/james-c-638ba0191/" id="homeTitle" class="word fancy" target="_blank">
-                        <span className="highlight" id="jLetter">j</span>
+                        <span className="highlight" id="jLetter">J</span>
                         <span className="highlight">a</span>
                         <span className="highlight">m</span>
                         <span className="highlight">e</span>
                         <span className="highlight">s</span>
                         <span className="noHighlight"> </span>
-                        <span className="highlight">s</span>
+                        <span className="highlight">S</span>
                         <span className="noHighlight">a</span>
                         <span className="noHighlight">n</span>
                         <span className="noHighlight">-</span>
                         <span className="highlight">y</span>
                         <span className="noHighlight">i</span>
                         <span className="noHighlight"> </span>
-                        <span className="highlight">c</span>
+                        <span className="highlight">C</span>
                         <span className="noHighlight">o</span>
                         <span className="noHighlight">w</span>
                         <span className="noHighlight">a</span>
@@ -42,15 +53,19 @@ export default function Home() {
                     </a>
                 </div>
                 <div className="asciiLine">
-                    <pre>   Z<                             br/>Z                          <br/> Z                 </pre>
-                </div>
-                <div className="asciiLine">
-                    <pre>
-                        |\      _,,,--,,_<br />
-                        /,`.-'`'   ._  \-;;,_  <br />
-                        |,4-  ) )_   .;.(  `'-'   <br />
-                        \=--''(_/._)-'(_\_)
-                    </pre>
+                    <div className="zees ascii">
+                        <h1 className={`asciiWord ${zState ? 'zActive' : 'zInactive'}`} id="Z1">Z</h1>
+                        <h1 className={`asciiWord ${zState ? 'zActive' : 'zInactive'}`} id="Z2">Z</h1>
+                        <h1 className={`asciiWord ${zState ? 'zActive' : 'zInactive'}`} id="Z3">Z</h1>
+                    </div>
+                    <div className="cat ascii">
+                        <pre>
+                            |\      _,,,--,,_<br />
+                            / ,`.-'`'   ._  \-;;,_  <br />
+                            | ,^   ) )_   .;.(  `'-'   <br />
+                            \=--''(_/._)-'(_\_)
+                        </pre>
+                    </div>
                 </div>
             </div>
         </div>
