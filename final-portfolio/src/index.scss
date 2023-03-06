@@ -1,5 +1,5 @@
 $background-color: #2C4251;
-$primary-color: #FFB6C1;
+$primary-color: #ff90a1;
 $secondary-color: #fff;
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text&family=Montserrat:wght@100;300;600');
 
@@ -343,7 +343,7 @@ button {
 
 .word {
     font-family: 'Montserrat';
-    font-size: 6.8vw;
+    font-size: 4.0vw;
     color: $secondary-color;
     transition: opacity 250ms ease;
     font-weight: 100;
@@ -359,19 +359,21 @@ button {
 .asciiLine {
     display:flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 1rem;
     color: darken($secondary-color, 0%);
     font-family: "Courier New", Courier, monospace;
 }
 
-.ascii {
-    width: 40%;
+#spacer {
+    height: 3rem;
 }
 
-.zees {
+.ascii {
+    width: 20%;
 }
+
 
 #Z1 {
     &.zActive {
@@ -411,10 +413,17 @@ button {
     font-weight: 300 !important;
     text-decoration: none;
     opacity: 1.0;
+    // box-shadow: 0.5rem 0.5rem 1rem rgba(0 0 0 /20%);
 }
 
 #homeWord {
-    font-size: 4vw;
+    font-size: 3vw;
+}
+
+#description {
+    font-size: 2vw;
+    font-weight: 300;
+    color: darken($color: $secondary-color, $amount: 30%)
 }
 
 .noHighlight {

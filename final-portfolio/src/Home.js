@@ -27,7 +27,7 @@ export default function Home() {
         <div id="home">
             <div id="homeWrapper">
                 <div className="line">
-                    <LetterSpan text="hi, i'm" id="homeWord" />
+                    <LetterSpan text="hi, I'm" id="homeWord" />
                 </div>
                 <div class="line">
                     <a href="https://www.linkedin.com/in/james-c-638ba0191/" id="homeTitle" class="word fancy" target="_blank">
@@ -50,8 +50,13 @@ export default function Home() {
                         <span className="noHighlight">a</span>
                         <span className="noHighlight">r</span>
                         <span className="noHighlight">d</span>
+                        <span className="noHighlight">.</span>
                     </a>
                 </div>
+                <div className="line">
+                    <LetterSpan text="I'm a 1st year Computer Science student at King's College London, and an aspiring software engineer." id="description"/>
+                </div>
+                <div className="line" id="spacer"></div>
                 <div className="asciiLine">
                     <div className="zees ascii">
                         <h1 className={`asciiWord ${zState ? 'zActive' : 'zInactive'}`} id="Z1">Z</h1>
@@ -60,10 +65,10 @@ export default function Home() {
                     </div>
                     <div className="cat ascii">
                         <pre>
-                            |\      _,,,--,,_<br />
-                            / ,`.-'`'   ._  \-;;,_  <br />
-                            | ,^   ) )_   .;.(  `'-'   <br />
-                            \=--''(_/._)-'(_\_)
+                            |\      ____--___<br />
+                            / ,`'-/`         `--,__  <br />
+                            | ,^   ) )_      (  `'-'   <br />
+                            \/--''(.:/.:)-'(.:\:)
                         </pre>
                     </div>
                 </div>

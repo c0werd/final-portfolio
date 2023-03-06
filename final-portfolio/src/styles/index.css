@@ -26,7 +26,7 @@ header {
   font-family: "Montserrat";
   font-weight: 300 !important;
   font-size: 50px;
-  color: #FFB6C1;
+  color: #ff90a1;
   margin: 0;
   padding: 0;
   cursor: pointer;
@@ -43,7 +43,7 @@ header {
   height: 100%;
   width: 100%;
   position: absolute;
-  background-color: #FFB6C1;
+  background-color: #ff90a1;
   border: none;
   border-radius: 5rem;
   outline: none;
@@ -181,7 +181,7 @@ header {
 
 button {
   text-decoration: none;
-  color: #FFB6C1;
+  color: #ff90a1;
   transition: all ease 250ms;
   font-family: "Montserrat";
   font-weight: 600;
@@ -194,7 +194,7 @@ button {
   cursor: pointer;
 }
 button:visited {
-  color: #FFB6C1;
+  color: #ff90a1;
 }
 button:hover {
   color: #fff;
@@ -245,7 +245,7 @@ button:hover {
 .nav-item {
   display: flex;
   text-decoration: none;
-  color: #FFB6C1;
+  color: #ff90a1;
   transition: all ease 250ms;
   font-family: "Montserrat";
   font-weight: 600;
@@ -297,7 +297,7 @@ button:hover {
 
 .word {
   font-family: "Montserrat";
-  font-size: 6.8vw;
+  font-size: 4vw;
   color: #fff;
   transition: opacity 250ms ease;
   font-weight: 100;
@@ -313,15 +313,19 @@ button:hover {
 .asciiLine {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 1rem;
   color: white;
   font-family: "Courier New", Courier, monospace;
 }
 
+#spacer {
+  height: 3rem;
+}
+
 .ascii {
-  width: 40%;
+  width: 20%;
 }
 
 #Z1.zActive {
@@ -358,7 +362,13 @@ button:hover {
 }
 
 #homeWord {
-  font-size: 4vw;
+  font-size: 3vw;
+}
+
+#description {
+  font-size: 2vw;
+  font-weight: 300;
+  color: #b3b3b3;
 }
 
 .noHighlight {
@@ -377,7 +387,7 @@ button:hover {
   cursor: pointer;
 }
 .fancy:hover .highlight {
-  color: #FFB6C1;
+  color: #ff90a1;
 }
 .fancy:hover span:not(.highlight) {
   opacity: 0.1;
