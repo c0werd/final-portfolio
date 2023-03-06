@@ -1,6 +1,7 @@
-import React, { Component } from "react";
 import { useState, useEffect } from 'react';
-
+import {
+    NavLink
+} from "react-router-dom";
 
 function LetterSpan({ text, id }) {
     const letters = text.split('');
@@ -30,7 +31,7 @@ export default function Home() {
                     <LetterSpan text="hi, I'm" id="homeWord" />
                 </div>
                 <div class="line">
-                    <a href="https://www.linkedin.com/in/james-c-638ba0191/" id="homeTitle" class="word fancy" target="_blank">
+                    <NavLink to="/about" id="homeTitle" className="word fancy">
                         <span className="highlight" id="jLetter">J</span>
                         <span className="highlight">a</span>
                         <span className="highlight">m</span>
@@ -51,7 +52,7 @@ export default function Home() {
                         <span className="noHighlight">r</span>
                         <span className="noHighlight">d</span>
                         <span className="noHighlight">.</span>
-                    </a>
+                    </NavLink>
                 </div>
                 <div className="line">
                     <LetterSpan text="I'm a 1st year Computer Science student at King's College London, and an aspiring software engineer." id="description"/>

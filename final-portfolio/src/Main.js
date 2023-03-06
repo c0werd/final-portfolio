@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import Home from ".//Home";
+import About from ".//About";
 
 function NavText({ letter, navState }) {
     return (
@@ -106,8 +107,9 @@ export default function Main() {
             </header>
             <div id="bodyWrapper">
                 <Routes>
-                    <Route path="/home" element={<Home />} />
                     <Route path="/" element={<Navigate replace to="/home" />} />
+                    <Route path="/home" element={<Home/>} />
+                    <Route path="/about" element={<About/>} />
                 </Routes>
             </div>
         </HashRouter>
