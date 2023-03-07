@@ -19,7 +19,7 @@ function NavText({ letter, navState }) {
 
 function NavItem({ word, navState, onClick }) {
     return (
-        <li>
+        <li className="nav-li">
             <NavLink
                 className={`nav-item ${word} ${navState}`}
                 to={word.toLowerCase()}
