@@ -94,7 +94,9 @@ export default function Main() {
         <HashRouter>
             <header>
                 <div id="logo">
-                    <h2></h2>
+                    <div id="counter">
+
+                    </div>
                 </div>
                 <div></div>
                 <div id="navstuff">

@@ -21,26 +21,22 @@ header {
     padding-top: 5vh;
     padding-bottom: 5vh;
     display: grid;
-    grid-template-columns: 1fr 60% 1fr;
+    grid-template-columns: 2fr 60% 1fr;
     justify-items: center;
     align-items: center;
 }
 
-#logo h2 {
-    font-family: 'Montserrat';
-    font-weight: 300 !important;
-    font-size: 50px;
-    color: $primary-color;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    overflow: hidden;
-    // transition: all ease 0.5s;
+#logo {
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+}
 
-    // &:hover {
-    //     transform: scale(1.1);
-    //     color:$secondary-color;
-    // }
+#counter {
+    float: right;
+    width: 20%;
+    height: 100%;
+    background-color: $primary-color;
 }
 
 #navstuff {
@@ -432,7 +428,7 @@ button {
 
 .asciiWord {
     font-size: 1.5rem;
-    color: darken($secondary-color, 30%);
+    color: darken($secondary-color, 0%);
     font-family: "Courier New", Courier, monospace;
 }
 
@@ -443,6 +439,7 @@ button {
     opacity: 1.0;
     // box-shadow: 0.5rem 0.5rem 1rem rgba(0 0 0 /20%);
     // border-radius: 50%;
+    text-shadow: 0 0 2rem #fff;
 }
 
 #homeWord {

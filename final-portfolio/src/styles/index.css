@@ -17,20 +17,22 @@ header {
   padding-top: 5vh;
   padding-bottom: 5vh;
   display: grid;
-  grid-template-columns: 1fr 60% 1fr;
+  grid-template-columns: 2fr 60% 1fr;
   justify-items: center;
   align-items: center;
 }
 
-#logo h2 {
-  font-family: "Montserrat";
-  font-weight: 300 !important;
-  font-size: 50px;
-  color: #ff90a1;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  overflow: hidden;
+#logo {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+#counter {
+  float: right;
+  width: 20%;
+  height: 100%;
+  background-color: #ff90a1;
 }
 
 #navstuff {
@@ -370,7 +372,7 @@ button:hover {
 
 .asciiWord {
   font-size: 1.5rem;
-  color: #b3b3b3;
+  color: white;
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -378,6 +380,7 @@ button:hover {
   font-weight: 300 !important;
   text-decoration: none;
   opacity: 1;
+  text-shadow: 0 0 2rem #fff;
 }
 
 #homeWord {

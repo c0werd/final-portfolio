@@ -69,7 +69,8 @@ export default function Home() {
                             |\      ____--___<br />
                             / ,`'-/`         `--,__  <br />
                             | ,^   ) )_      (  `'-'   <br />
-                            \/--''(.:/.:)-'(.:\:)
+                            \/--''(.:/.:)-'(.:\:) <br/>
+                            .         ©Patrick Roberts 2019
                         </pre>
                     </div>
                 </div>
