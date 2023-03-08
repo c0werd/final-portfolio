@@ -10,6 +10,7 @@ import {
 
 import Home from ".//Home";
 import About from ".//About";
+import Chat from ".//Chat";
 
 function NavText({ letter, navState }) {
     return (
@@ -94,9 +95,7 @@ export default function Main() {
         <HashRouter>
             <header>
                 <div id="logo">
-                    <div id="counter">
-
-                    </div>
+                    <div></div>
                 </div>
                 <div></div>
                 <div id="navstuff">
@@ -112,6 +111,7 @@ export default function Main() {
                     <Route path="/" element={<Navigate replace to="/home" />} />
                     <Route path="/home" element={<Home/>} />
                     <Route path="/about" element={<About/>} />
+                    <Route path="/chat" element={<Chat/>} />
                 </Routes>
             </div>
         </HashRouter>
